@@ -51,7 +51,7 @@
           this.$validator.validateAll().then(() => {
             console.log('da')
             console.log(axios)
-            axios.post('contact', {name:this.name,email:this.email,subject:this.subject,message:this.subject}).then((resp) => {
+            axios.post('contact', {name:this.name,email:this.email,subject:this.subject,message:this.message}).then((resp) => {
               this.sent = true
             }).catch((resp) => {
                 console.log(resp)
