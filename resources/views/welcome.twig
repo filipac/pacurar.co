@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vertica - Retina Ready Resume / CV & Portfolio</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="{{ url('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('vendor/font-awesome/css/font-awesome.min.css') }}">
+    <link href="{{ url('vendor/nivo-lightbox/nivo-lightbox.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('vendor/nivo-lightbox/themes/default/default.css') }}" type="text/css" />
+    <link href="{{ url('vendor/animate.css') }}" rel="stylesheet">
+    <link href="{{ mix('/css/styles.css') }}" rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!--[if lt IE 9]>
+
+    <script src="{{ url('vendor/html5shiv.js') }}"></script>
+    <script src="{{ url('vendor/respond.min.js') }}"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#side-menu">
+<div class="loader" id="page-loader">
+    <div class="loading-wrapper">
+        <div class="tp-loader spinner"></div>
+        <div class="side-menu-name">
+            Filip <strong>Pacurar</strong>
+        </div>
+        <p class="side-menu-job">CTO, Full Stack Developer, husband and dad</p>
+    </div>
+</div>
+<div class="side-menu-open hidden-sm hidden-xs">
+    <a href="#" class="btn btn-default side-menu-button"><i class="fa fa-bars"></i> MENU</a>
+</div>
+
+{% include 'partials/side-menu.twig' %}
+
+<!-- CONTENT
+========================================================= -->
+<section id="content-body" class="container animated">
+    <div class="row" id="intro">
+
+        <div class="col-md-10 col-sm-10  col-md-offset-2 col-sm-offset-1 clearfix top-colors">
+            <div class="top-color top-color1"></div>
+            <div class="top-color top-color2"></div>
+            <div class="top-color top-color3"></div>
+            <div class="top-color top-color1"></div>
+            <div class="top-color top-color2"></div>
+        </div>
+
+        <div class="col-md-10 col-sm-10 col-md-offset-2 col-sm-offset-1 resume-container">
+
+            {% include 'partials/profile-intro.twig' %}
+
+            <!-- ============  TIMELINE ================= -->
+            <div class="timeline-wrap">
+                <div class="timeline-bg">
+
+                    {% include 'timeline/info.twig' %}
+                    {% include 'timeline/education.twig' %}
+                    {% include 'timeline/experience.twig' %}
+                    {% include 'timeline/skills.twig' %}
+                    {% include 'timeline/interests.twig' %}
+                    {% include 'timeline/portfolio.twig' %}
+                    {% include 'timeline/contact.twig' %}
+
+                    <!-- ====>> SECTION: THANK YOU <<====-->
+                    <section class="timeline profile-infos">
+
+                        <!-- VERTICAL MARGIN (necessary for the timeline effect) -->
+                        <div class="line row timeline-margin timeline-margin-big">
+                            <div class="content-wrap">
+                                <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                                <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height"></div>
+                                <div class="col-md-9 bg1 full-height"></div>
+                            </div>
+                        </div>
+                        <!-- /VERTICAL MARGIN -->
+
+                        <!-- SECTION ITEM -->
+                        <div class="line row line-thank-you">
+                            <!-- Margin Collums (necessary for the timeline effect) -->
+                            <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                            <div class="col-md-2 timeline-progress hidden-sm hidden-xs full-height timeline-point "></div>
+                            <!-- /Margin Collums -->
+                            <!-- Item Content -->
+                            <div class="col-md-8 content-wrap bg1">
+                                <div class="line-content">
+                                    <!-- Subtitle -->
+                                    <h3 class="thank-you">Thank You!</h3>
+                                    <!-- /Subtitle -->
+                                </div>
+                            </div>
+                            <!-- /Item Content -->
+                            <!-- Margin Collum-->
+                            <div class="col-md-1 bg1 timeline-space full-height hidden-sm hidden-xs"></div>
+                            <!-- / Margin Collum-->
+                        </div>
+                        <!-- /SECTION ITEM -->
+                    </section>
+                    <!-- ==>> /SECTION: PROFILE INFOS -->
+                </div>
+            </div>
+            <!-- ============  /TIMELINE ================= -->
+
+            <!-- ============  FOOTER ================= -->
+            <footer id="footer" class="row">
+                <!-- Put your Quote Here-->
+                <p class="quote">“It's not a faith in technology. It's faith in people”</p>
+                <!-- /Quote -->
+                <!-- Quote Autor -->
+                <p class="author">Steve Jobs</p>
+                <!-- /Quote Autor -->
+            </footer>
+            <!-- ============  /FOOTER ================= -->
+        </div>
+    </div>
+</section>
+<!-- /CONTENT
+========================================================= -->
+
+
+<!-- Javascript Files
+========================================================= -->
+<!-- jQuery (necessary for plugins) -->
+<script src="{{ url('vendor/jquery-1.11.1.min.js') }}"></script>
+<!-- /jquery -->
+<!-- bootstrap -->
+<script src="{{ url('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+<!-- /bootstrap -->
+<!-- easing -->
+<script src="{{ url('vendor/jquery.easing.min.js') }}"></script>
+<!-- /easing -->
+<!-- jQuery Mousewheel -->
+<script src="{{ url('vendor/jquery.mousewheel.min.js') }}"></script>
+<!-- /jQuery Mousewheel -->
+<!-- jQuery Mousewheel Smoothscroll -->
+<script src="{{ url('vendor/jquery.nicescroll.min.js') }}"></script>
+<script src="{{ url('vendor/jquery.nicescroll.plus.js') }}"></script>
+<!-- /jQuery Mousewheel Smoothscroll -->
+<!-- Waypoints (for CSS3 animations) -->
+<script src="{{ url('vendor/waypoints.min.js') }}"></script>
+<!-- /waypoints -->
+<!-- Modal box-->
+<script src="{{ url('vendor/nivo-lightbox/nivo-lightbox.min.js') }}"></script>
+<!-- /Modal Box -->
+<!-- Carousel-->
+<script src="{{ url('vendor/jquery.bxslider.min.js') }}"></script>
+<!-- /Carousel -->
+<!-- Front-end Validator (for forms) -->
+<script src="{{ url('vendor/jquery.validate.min.js') }}"></script>
+<!-- /Front-end Validator -->
+<!-- placeholder Support for IE -->
+<script src="{{ url('vendor/placeholders.jquery.min.js') }}"></script>
+<!-- /placeholder support -->
+<!-- Cross-browser -->
+<script src="{{ url('vendor/cross-browser.js') }}"></script>
+<!-- /Cross-browser -->
+<!-- Configurations -->
+<script src="{{  url('js/main.js') }}"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
+<!-- /Configurations -->
+</body>
+</html>
