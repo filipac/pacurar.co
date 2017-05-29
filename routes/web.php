@@ -14,5 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/php', function () {
+    phpinfo();
+});
 Route::post('/contact', 'ContactController@postMessage');

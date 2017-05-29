@@ -20,4 +20,10 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testNotFound()
+    {
+        $response = $this->get('/php');
+        $response->assertStatus(404);
+    }
 }
