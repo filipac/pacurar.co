@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/php', function () {
+    ob_start();
     phpinfo();
+    return ob_get_clean();
 });
 Route::post('/contact', 'ContactController@postMessage');

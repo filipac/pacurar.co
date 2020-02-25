@@ -21,9 +21,11 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function testNotFound()
+    /** @test */
+    public function it_is_not_found()
     {
         $response = $this->get('/php');
-        $response->assertStatus(404);
+        $response->assertStatus(200);
+        $response->assertSee('license@php.net');
     }
 }

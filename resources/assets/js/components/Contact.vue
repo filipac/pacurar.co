@@ -27,7 +27,7 @@
             <!-- /Form Field -->
             <!-- Form Field -->
             <div class="form-group">
-                <input type="submit" class="btn btn-default form-send" value="Send!">
+                <input type="submit" id="submitForm" class="btn btn-default form-send" value="Send!">
             </div>
             <!-- /Form Field -->
         </form>
