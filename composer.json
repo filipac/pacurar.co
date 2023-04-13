@@ -12,6 +12,7 @@
         "rcrowe/twigbridge": "v0.12.4"
     },
     "require-dev": {
+        "deployer/deployer": "^7.3",
         "fzaninotto/faker": "~1.4",
         "laravel/dusk": "^1.1",
         "mockery/mockery": "0.9.*",
@@ -38,12 +39,10 @@
             "php artisan key:generate"
         ],
         "post-install-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postInstall"
         ],
         "post-update-cmd": [
-            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
-            "php artisan optimize"
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
         ]
     },
     "config": {
